@@ -34,7 +34,7 @@ secret: ''
 external-ui: /alexamaster-autosurf/clash/ui
 
 proxy-providers:
-  proxy:
+  server:
     type: http
     url: *url
     interval: 3600
@@ -48,7 +48,7 @@ proxy-groups:
   - name: "Auto"
     type: url-test
     use:
-      - proxy
+      - server
     tolerance: 150
     # lazy: true
     url: "http://www.gstatic.com/generate_204"
@@ -56,7 +56,7 @@ proxy-groups:
   - name: Proxy
     type: select
     use:
-      - proxy
+      - server
     proxies:
       - Auto
   - name: Domestic
