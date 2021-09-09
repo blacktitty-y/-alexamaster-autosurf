@@ -1,4 +1,5 @@
 #!/bin/bash
+
 while :
 do
   sleep 5
@@ -7,7 +8,9 @@ if [[ $ip =~ "地区或运营商" ]]
 then
   continue
 else
-  npm start
   break
 fi
 done
+
+./config/msg.sh
+npm start
