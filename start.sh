@@ -2,6 +2,7 @@
 if [ ! -f config/am.sh ]
 then
 cp am.sh config
+cp msg.sh config
 fi
 if [ ! -f config/config.yaml ]
 then
