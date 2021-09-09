@@ -1,7 +1,13 @@
 #!/bin/bash
-ip="地区或运营商"
-while [[ $ip =~ "地区或运营商" ]] ; do
+while :
+do
   sleep 5
-  ip=$(curl cip.cc)
+ip=$(curl cip.cc)
+if [[ $ip =~ "地区或运营商" ]]
+then
+  continue
+else
+  npm start
+  break
+fi
 done
-npm start
